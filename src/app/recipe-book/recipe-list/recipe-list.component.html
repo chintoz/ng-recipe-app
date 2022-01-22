@@ -5,13 +5,13 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <a href="#" class="list-group-item list-group-item-action clearfix">
+    <a href="#" class="list-group-item list-group-item-action clearfix" *ngFor="let recipe of recipes">
       <div class="float-start">
-        <h4 class="mb-1">Recipe Name</h4>
-        <small>Description</small>
+        <h4 class="mb-1">{{recipe.name}}</h4>
+        <small>{{recipe.description}}</small>
       </div>
       <span class="float-end">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Recipe.jpg" alt="" class="img-fluid" style="max-height: 50px;">
+        <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-fluid" style="max-height: 50px;">
       </span>
     </a>
     <app-recipe-item></app-recipe-item>
