@@ -1,9 +1,9 @@
-<a href="#" class="list-group-item list-group-item-action clearfix">
+<a href="#" class="list-group-item list-group-item-action clearfix" (click)="onItemSelected()">
   <div class="float-start">
     <h4 class="mb-1">{{recipe.name}}</h4>
     <small>{{recipe.description}}</small>
   </div>
   <span class="float-end">
         <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-fluid" style="max-height: 50px;">
-      </span>
+  </span>
 </a>
